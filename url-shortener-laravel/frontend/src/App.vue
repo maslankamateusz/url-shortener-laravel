@@ -4,23 +4,19 @@ import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
-
-  <RouterView />
+  <div>
+    <nav>
+      <router-link to="/">Home</router-link> |
+      <router-link to="/shorten">Shorten</router-link> |
+      <router-link to="/expand">Expand</router-link>
+    </nav>
+    <router-view />
+  </div>
 </template>
 
 <style scoped>
+
+
 header {
   line-height: 1.5;
   max-height: 100vh;
@@ -36,6 +32,7 @@ nav {
   font-size: 12px;
   text-align: center;
   margin-top: 2rem;
+  margin-bottom: 20px;
 }
 
 nav a.router-link-exact-active {
@@ -50,6 +47,9 @@ nav a {
   display: inline-block;
   padding: 0 1rem;
   border-left: 1px solid var(--color-border);
+  margin-right: 15px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 nav a:first-of-type {
