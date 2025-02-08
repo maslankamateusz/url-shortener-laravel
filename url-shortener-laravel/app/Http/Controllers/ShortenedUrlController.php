@@ -37,11 +37,11 @@ class ShortenedUrlController extends Controller
     public function expand($shortCode)
     {
         $shortenedUrl = ShortenedUrl::where('short_code', $shortCode)->first();
-
+    
         if (!$shortenedUrl) {
-            return response()->json(['error' => 'URL not found'], 404);
+            return response()->json(['error' => 'Shortened URL not found'], 404);
         }
-
-        return response()->json(['original_url' => $shortenedUrl->original_url], 200);
+    
+        return redirect()->away($shortenedUrl->original_url);
     }
 }
