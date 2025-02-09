@@ -3,6 +3,7 @@
       <router-link to="/">Home</router-link>
       <router-link to="/shorten">Shorten</router-link>
       <router-link to="/expand">Expand</router-link>
+      <router-link to="/links">Links list</router-link>
     </nav>
   </template>
   
