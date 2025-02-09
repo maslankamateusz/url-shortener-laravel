@@ -20,13 +20,17 @@ const expandUrl = async () => {
 </script>
 
 <template>
-  <div>
-    <h2>Expand Shortened URL</h2>
+  <div class="container">
+    <h2>Expand URL</h2>
     <input v-model="shortCode" placeholder="Enter Shortened Code" />
     <button @click="expandUrl">Expand</button>
 
     <div v-if="originalUrl">
-      <p>Original URL: <a :href="originalUrl" target="_blank">{{ originalUrl }}</a></p>
+      <p>Original URL: 
+        <a :href="originalUrl" target="_blank" rel="noopener noreferrer">
+          {{ originalUrl }}
+        </a>
+      </p>
     </div>
 
     <p v-if="error">{{ error }}</p>
